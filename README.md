@@ -1,5 +1,7 @@
 # miguel-blockchain-golang
 
+![stability-wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg)
+
 [![On Push](https://github.com/JoseRodrigues443/miguel-blockchain-golang/actions/workflows/go.yml/badge.svg)](https://github.com/JoseRodrigues443/miguel-blockchain-golang/actions/workflows/go.yml)
 
 A blockchain implementation in golang.
