@@ -2,7 +2,6 @@
 
 [![On Push](https://github.com/JoseRodrigues443/miguel-blockchain-golang/actions/workflows/go.yml/badge.svg)](https://github.com/JoseRodrigues443/miguel-blockchain-golang/actions/workflows/go.yml)
 
-
 A blockchain implementation in golang.
 For better understanding how the core of a blockchain would be implemented.
 
