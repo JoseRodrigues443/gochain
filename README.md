@@ -5,6 +5,10 @@ For better understanding how the core of a blockchain would be implemented.
 
 In teh future will have a consensus system, with proof of work and proof of stake to show the differences in implementation.
 
+## Requirements
+
+- make
+- golang
 
 ## How to run
 
