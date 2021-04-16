@@ -24,7 +24,7 @@ func main() {
 		fmt.Printf("Hash ==> %x\n", block.Hash)
 
 		pow := ofWork.Init()
-		fmt.Printf("Pow: %s\n", strconv.FormatBool(pow.Validate(block.Data, block.Hash, block.PrevHash, block.Nonce)))
+		fmt.Printf("Validation with proof of work: ==> %s\n", strconv.FormatBool(pow.Validate(block.Data, block.Hash, block.PrevHash, block.Nonce)))
 		fmt.Println()
 
 	}
