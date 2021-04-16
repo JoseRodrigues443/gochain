@@ -1,25 +1,25 @@
 package block
 
-import (
-	"bytes"
-	"crypto/sha256"
-)
+import "github.com/JoseRodrigues443/miguel-blockchain-golang/proof"
 
 type Block struct {
 	Hash     []byte
 	Data     []byte
 	PrevHash []byte
+	Nonce    int
 }
 
-func (b *Block) DeriveHash() {
-	info := bytes.Join([][]byte{b.Data, b.PrevHash}, []byte{})
-	hash := sha256.Sum256(info)
-	b.Hash = hash[:]
-}
+func Create(data string, prevHash []byte, proof proof.Proofer) *Block {
+	block := &Block{[]byte{}, []byte(data), prevHash, 0}
+	nonce, hash := proof.Run(block.Data, block.Hash, block.PrevHash, block.Nonce)
 
-func CreateBlock(data string, prevHash []byte) *Block {
-	block := &Block{[]byte{}, []byte(data), prevHash}
-	block.DeriveHash()
+	block.Hash = hash[:]
+	block.Nonce = nonce
+
 	return block
 }
 
+func Copy(Hash []byte, Data []byte, PrevHash []byte, Nonce int) *Block {
+	block := &Block{Hash: Hash, Data: Data, PrevHash: PrevHash, Nonce: Nonce}
+	return block
+}
