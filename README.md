@@ -1,4 +1,4 @@
-# miguel-blockchain-golang
+# Gochain -  A Simple Blockchain in Go
 
 ![stability-wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg)
 
